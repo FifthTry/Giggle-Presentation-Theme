@@ -1,0 +1,13 @@
+-- import: library
+
+-- ftd.row panel:
+width: fill
+height: fill
+background-color: rgba(255,255,255,0.36)
+spacing: space-around
+
+--- ftd.text: Next
+$event-click$: increment $library.slide-no clamp 0 $library.total
+
+--- ftd.text: Previous
+$event-click$: decrement $library.slide-no clamp 0 $library.total
