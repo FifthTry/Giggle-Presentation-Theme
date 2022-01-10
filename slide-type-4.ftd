@@ -78,10 +78,10 @@ overflow-y: auto
 
 --- ftd.text: $title
 style: medium
-color: rgb(42, 27, 16)
-text-align: center
+color: #5e5a58
 align: center
-size: 50
+size: 60
+text-align: center
 
 --- container: ftd.main
 
@@ -101,10 +101,11 @@ if: $subtitle is not null
 font: fantasy
 text-align: center
 align: center
-size: 30
+size: 40
 
 --- ftd.text: $text
 if: $text is not null
 font: sans-serif
 text-align: center
-line-height: 25
+line-height: 35
+size: 25
