@@ -1,3 +1,5 @@
+-- library.total: 1
+
 -- ppt.presentation:
 
 -- slide.slide:
@@ -5,4 +7,13 @@ type: 1
 title: ORAS
 subtitle: Stylish fashion Brand
 text: Presentations Templates are communication tools that can be used as lectures, reports, and more.
-image: https://media-public.canva.com/MADGyXQvU9w/4/screen.jpg
+slide-number: 0
+image: ../static/pic1.jpeg
+
+-- slide.slide:
+type: 1
+title: ORAS 2
+subtitle: Stylish fashion Brand
+text: Presentations Templates are communication tools that can be used as lectures, reports, and more.
+slide-number: 1
+image: ../static/pic1.jpeg

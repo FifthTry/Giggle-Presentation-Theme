@@ -1,4 +1,5 @@
 -- import: slide-type-1 as slide1
+-- import: library
 
 -- ftd.column slide:
 integer type:
@@ -8,6 +9,8 @@ optional string text:
 optional string image:
 width: fill
 height: fill
+integer slide-number:
+if: $library.slide-no == $slide-number
 
 --- slide1.slide-type-1:
 if: $type == 1

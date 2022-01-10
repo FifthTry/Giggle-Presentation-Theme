@@ -7,7 +7,7 @@ optional string subtitle:
 optional string text:
 optional string image:
 slots: slide-info slide-image
-slot-heights: calc(100vh - 80px)
+slot-heights: 100%
 slot-widths: 50% auto
 spacing: 40
 padding: 20
