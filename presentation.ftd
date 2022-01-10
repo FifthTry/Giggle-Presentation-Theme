@@ -9,7 +9,7 @@ background-color: black
 
 --- ftd.column:
 width: fill
-height: percent 96
+height: percent 94
 padding: 20
 
 --- ftd.column:

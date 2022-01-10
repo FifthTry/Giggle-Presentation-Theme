@@ -1,13 +1,41 @@
 -- import: library
 
--- ftd.row panel:
+-- ftd.grid panel:
 width: fill
-height: fill
-background-color: rgba(255,255,255,0.36)
-spacing: space-around
+slots: main
+/padding-vertical: 10
 
---- ftd.text: Next
-$event-click$: increment $library.slide-no clamp 0 $library.total
+--- ftd.row:
+slot: main
+align: center
 
---- ftd.text: Previous
+--- ftd.image:
+src: ../static/change-button.png
 $event-click$: decrement $library.slide-no clamp 0 $library.total
+width: 120
+align: center
+
+--- show-meter:
+align: center
+
+--- ftd.image:
+src: ../static/change-button.png
+scale-x: -1
+$event-click$: increment $library.slide-no clamp 0 $library.total
+width: 120
+align: center
+
+
+-- ftd.row show-meter:
+padding: 11
+background-color: white
+border-radius: 10
+
+--- ftd.integer: $library.slide-no
+align: center
+
+--- ftd.text: /
+align: center
+
+--- ftd.integer: $library.total
+align: center
