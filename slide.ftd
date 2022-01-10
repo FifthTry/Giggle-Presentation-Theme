@@ -1,5 +1,6 @@
 -- import: slide-type-1 as slide1
 -- import: slide-type-2 as slide2
+-- import: slide-type-3 as slide3
 -- import: library
 
 -- ftd.column slide:
@@ -23,6 +24,14 @@ image-1: $image-1
 
 --- slide2.slide-type-2:
 if: $type == 2
+title: $title
+subtitle: $subtitle
+text: $text
+image-1: $image-1
+image-2: $image-2
+
+--- slide3.slide-type-3:
+if: $type == 3
 title: $title
 subtitle: $subtitle
 text: $text
