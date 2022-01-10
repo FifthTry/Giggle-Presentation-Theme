@@ -5,7 +5,7 @@
 integer type:
 string title:
 optional string subtitle:
-optional string text:
+optional body text:
 optional string image:
 width: fill
 height: fill

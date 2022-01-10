@@ -3,7 +3,6 @@
 -- ftd.grid panel:
 width: fill
 slots: main
-/padding-vertical: 10
 
 --- ftd.row:
 slot: main
