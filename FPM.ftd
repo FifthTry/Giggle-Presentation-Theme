@@ -1,6 +1,6 @@
 -- import: fpm
 
--- fpm.package: Giggle-Presentation-Theme
+-- fpm.package: fifthtry.github.io/Giggle-Presentation-Theme
 zip: github.com/fifthtry/giggle-presentation-theme/archive/refs/heads/main.zip
 
 -- fpm.dependency: fifthtry.github.io/blog-theme
