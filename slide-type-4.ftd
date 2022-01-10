@@ -1,0 +1,98 @@
+-- ftd.grid slide-type-4:
+width: fill
+height: fill
+string title:
+optional string subtitle:
+optional string text:
+optional string image-1:
+optional string image-2:
+slots: slide-image | slide-info
+slot-heights: 20% auto
+slot-widths: 100%
+/spacing: 20
+padding: 20
+
+--- slide-information:
+title: $title
+subtitle: $subtitle
+text: $text
+slot: slide-info
+
+--- slide-images:
+image-1: $image-1
+image-2: $image-2
+slot: slide-image
+
+
+-- ftd.grid slide-images:
+optional string image-1:
+optional string image-2:
+width: fill
+height: fill
+slots: image1 image2
+slot-widths: 80% auto
+slot-heights: 100%
+
+--- ftd.image:
+if: $image-1 is not null
+src: $image-1
+height: fill
+crop: true
+slot: image1
+
+--- ftd.image:
+if: $image-2 is not null
+src: $image-2
+height: fill
+crop: true
+slot: image2
+
+
+
+-- ftd.grid slide-information:
+string title:
+optional string subtitle:
+optional string text:
+width: fill
+height: fill
+slots: text1 text2
+slot-widths: auto 60%
+slot-heights: 100%
+spacing: 20
+
+--- ftd.column:
+width: fill
+height: fill
+slot: text1
+background-color: rgb(200, 201, 190)
+align: center
+spacing: space-around
+
+--- ftd.text: $title
+style: medium
+color: rgb(42, 27, 16)
+align: center
+size: 50
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+height: fill
+slot: text2
+/border-width: 2
+/border-radius: 20
+spacing: space-around
+padding: 20
+
+--- ftd.text: $subtitle
+if: $subtitle is not null
+font: fantasy
+align: center
+size: 30
+
+--- ftd.text: $text
+if: $text is not null
+font: sans-serif
+text-align: center
+line-height: 20
