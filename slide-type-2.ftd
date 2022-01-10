@@ -38,23 +38,28 @@ optional string subtitle:
 optional string text:
 width: fill
 height: fill
-spacing: space-around
+spacing: 30
 padding: 30
+overflow-x: auto
+overflow-y: auto
 
 --- ftd.text: $title
 style: medium
 color: rgb(42, 27, 16)
 align: center
 size: 50
+text-align: center
 
 --- ftd.text: $subtitle
 if: $subtitle is not null
 font: fantasy
 align: center
 size: 30
+text-align: center
 
 
 --- ftd.text: $text
 if: $text is not null
 font: sans-serif
 text-align: center
+line-height: 25

@@ -35,6 +35,8 @@ optional string image-1:
 optional string image-2:
 slots: title | body
 slot-heights: 10% auto
+overflow-x: auto
+overflow-y: auto
 
 --- ftd.text: $title
 style: medium
@@ -72,9 +74,11 @@ optional string subtitle:
 optional string text:
 width: fill
 height: fill
-spacing: space-around
+spacing: 40
 padding: 30
 background-color: #c8c9be
+overflow-x: auto
+overflow-y: auto
 
 
 --- ftd.text: $subtitle
@@ -82,6 +86,7 @@ if: $subtitle is not null
 font: fantasy
 align: center
 size: 30
+text-align: center
 
 
 --- ftd.text: $text

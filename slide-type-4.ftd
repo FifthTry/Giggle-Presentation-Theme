@@ -11,6 +11,8 @@ slot-heights: 20% auto
 slot-widths: 100%
 /spacing: 20
 padding: 20
+overflow-x: auto
+overflow-y: auto
 
 --- slide-information:
 title: $title
@@ -32,6 +34,8 @@ height: fill
 slots: image1 image2
 slot-widths: 80% auto
 slot-heights: 100%
+overflow-x: auto
+overflow-y: auto
 
 --- ftd.image:
 if: $image-1 is not null
@@ -59,6 +63,8 @@ slots: text1 text2
 slot-widths: auto 60%
 slot-heights: 100%
 spacing: 20
+overflow-x: auto
+overflow-y: auto
 
 --- ftd.column:
 width: fill
@@ -67,10 +73,13 @@ slot: text1
 background-color: rgb(200, 201, 190)
 align: center
 spacing: space-around
+overflow-x: auto
+overflow-y: auto
 
 --- ftd.text: $title
 style: medium
 color: rgb(42, 27, 16)
+text-align: center
 align: center
 size: 50
 
@@ -82,12 +91,15 @@ height: fill
 slot: text2
 /border-width: 2
 /border-radius: 20
-spacing: space-around
+spacing: 40
 padding: 20
+overflow-x: auto
+overflow-y: auto
 
 --- ftd.text: $subtitle
 if: $subtitle is not null
 font: fantasy
+text-align: center
 align: center
 size: 30
 
@@ -95,4 +107,4 @@ size: 30
 if: $text is not null
 font: sans-serif
 text-align: center
-line-height: 20
+line-height: 25
