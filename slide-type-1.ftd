@@ -4,7 +4,7 @@ height: fill
 string title:
 optional string subtitle:
 optional string text:
-optional string image:
+optional string image-1:
 slots: slide-info slide-image
 slot-heights: 100%
 slot-widths: 50% auto
@@ -17,7 +17,8 @@ subtitle: $subtitle
 text: $text
 
 --- ftd.image:
-src: $image
+if: $image-1 is not null
+src: $image-1
 height: fill
 crop: true
 slot: slide-image
@@ -49,3 +50,4 @@ size: 30
 if: $text is not null
 font: sans-serif
 text-align: center
+line-height: 20

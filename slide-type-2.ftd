@@ -4,12 +4,20 @@ height: fill
 string title:
 optional string subtitle:
 optional string text:
-optional string image:
-slots: slide-info slide-image
+optional string image-1:
+optional string image-2:
+slots: slide-image-1 slide-info slide-image-2
 slot-heights: 100%
-slot-widths: 50% auto
+slot-widths: 15% 50% auto
 spacing: 40
 padding: 20
+
+--- ftd.image:
+if: $image-1 is not null
+src: $image-1
+height: fill
+crop: true
+slot: slide-image-1
 
 --- slide-information:
 title: $title
@@ -17,10 +25,11 @@ subtitle: $subtitle
 text: $text
 
 --- ftd.image:
-src: $image
+if: $image-2 is not null
+src: $image-2
 height: fill
 crop: true
-slot: slide-image
+slot: slide-image-2
 
 
 -- ftd.column slide-information:

@@ -1,4 +1,5 @@
 -- import: slide-type-1 as slide1
+-- import: slide-type-2 as slide2
 -- import: library
 
 -- ftd.column slide:
@@ -6,7 +7,8 @@ integer type:
 string title:
 optional string subtitle:
 optional body text:
-optional string image:
+optional string image-1:
+optional string image-2:
 width: fill
 height: fill
 integer slide-number:
@@ -17,4 +19,12 @@ if: $type == 1
 title: $title
 subtitle: $subtitle
 text: $text
-image: $image
+image-1: $image-1
+
+--- slide2.slide-type-2:
+if: $type == 2
+title: $title
+subtitle: $subtitle
+text: $text
+image-1: $image-1
+image-2: $image-2
