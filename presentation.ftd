@@ -1,0 +1,13 @@
+-- ftd.column presentation:
+width: fill
+height: fill
+open: content
+background-color: black
+padding: 20
+
+--- ftd.column:
+id: content
+background-color: white
+align: center
+width: fill
+height: fill

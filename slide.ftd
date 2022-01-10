@@ -1,0 +1,17 @@
+-- import: slide-type-1 as slide1
+
+-- ftd.column slide:
+integer type:
+string title:
+optional string subtitle:
+optional string text:
+optional string image:
+width: fill
+height: fill
+
+--- slide1.slide-type-1:
+if: $type == 1
+title: $title
+subtitle: $subtitle
+text: $text
+image: $image
