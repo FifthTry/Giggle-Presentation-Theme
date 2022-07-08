@@ -1,19 +1,20 @@
--- import: slide-type-1 as slide1
--- import: slide-type-2 as slide2
--- import: slide-type-3 as slide3
--- import: slide-type-4 as slide4
--- import: library
+-- import: fifthtry.github.io/Giggle-Presentation-Theme/slide-type-1 as slide1
+-- import: fifthtry.github.io/Giggle-Presentation-Theme/slide-type-2 as slide2
+-- import: fifthtry.github.io/Giggle-Presentation-Theme/slide-type-3 as slide3
+-- import: fifthtry.github.io/Giggle-Presentation-Theme/slide-type-4 as slide4
+-- import: fifthtry.github.io/Giggle-Presentation-Theme/library
 
 -- ftd.column slide:
 integer type:
 string title:
 optional string subtitle:
 optional body text:
-optional string image-1:
-optional string image-2:
+optional ftd.image-src image-1:
+optional ftd.image-src image-2:
 width: fill
 height: fill
 integer slide-number:
+background-color: $fpm.color.main.text-strong
 if: $library.slide-no == $slide-number
 
 --- slide1.slide-type-1:

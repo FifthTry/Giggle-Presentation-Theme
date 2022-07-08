@@ -1,11 +1,13 @@
+-- import: fpm
+
 -- ftd.grid slide-type-4:
 width: fill
 height: fill
 string title:
 optional string subtitle:
 optional string text:
-optional string image-1:
-optional string image-2:
+optional ftd.image-src image-1:
+optional ftd.image-src image-2:
 slots: slide-image | slide-info
 slot-heights: 20% auto
 slot-widths: 100%
@@ -27,8 +29,8 @@ slot: slide-image
 
 
 -- ftd.grid slide-images:
-optional string image-1:
-optional string image-2:
+optional ftd.image-src image-1:
+optional ftd.image-src image-2:
 width: fill
 height: fill
 slots: image1 image2
@@ -41,15 +43,15 @@ overflow-y: auto
 if: $image-1 is not null
 src: $image-1
 height: fill
-crop: true
 slot: image1
+crop: true
 
 --- ftd.image:
 if: $image-2 is not null
 src: $image-2
 height: fill
-crop: true
 slot: image2
+crop: true
 
 
 
@@ -70,17 +72,16 @@ overflow-y: auto
 width: fill
 height: fill
 slot: text1
-background-color: rgb(200, 201, 190)
+background-color: $background
 align: center
 spacing: space-around
 overflow-x: auto
 overflow-y: auto
 
 --- ftd.text: $title
-style: medium
-color: #5e5a58
+color: $blue
 align: center
-size: 60
+role: $big
 text-align: center
 
 --- container: ftd.main
@@ -98,14 +99,62 @@ overflow-y: auto
 
 --- ftd.text: $subtitle
 if: $subtitle is not null
-font: fantasy
 text-align: center
 align: center
-size: 40
+role: $large
 
 --- ftd.text: $text
 if: $text is not null
-font: sans-serif
 text-align: center
+role: $medium
+
+
+
+
+-- ftd.font-size large-desktop:
+line-height: 48
+size: 40
+letter-spacing: 0
+
+-- ftd.type large: fantasy
+desktop: $large-desktop
+mobile: $large-desktop
+xl: $large-desktop
+weight: 400
+
+
+-- ftd.font-size medium-desktop:
 line-height: 35
 size: 25
+letter-spacing: 0
+
+
+-- ftd.type medium: sans-serif
+desktop: $medium-desktop
+mobile: $medium-desktop
+xl: $medium-desktop
+weight: 400
+
+
+
+
+-- ftd.font-size big-desktop:
+line-height: 68
+size: 60
+letter-spacing: 0
+
+
+-- ftd.type big: serif
+desktop: $big-desktop
+mobile: $big-desktop
+xl: $big-desktop
+weight: 500
+
+-- ftd.color blue:
+light: #5e5a58
+dark: #5e5a58
+
+
+-- ftd.color background:
+light:rgb(200, 201, 190)
+dark:rgb(200, 201, 190)
