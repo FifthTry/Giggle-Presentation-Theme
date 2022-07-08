@@ -1,0 +1,9 @@
+-- import: fpm
+
+-- fpm.package: fifthtry.github.io/Giggle-Presentation-Theme
+zip: github.com/fifthtry/giggle-presentation-theme/archive/refs/heads/main.zip
+base: https://raw.githubusercontent.com/fifthtry/Giggle-Presentation-Theme/main
+
+-- fpm.dependency: fifthtry.github.io/blog-theme
+-- fpm.auto-import: fifthtry.github.io/Giggle-Presentation-Theme/assets
+-- fpm.auto-import: fpm
