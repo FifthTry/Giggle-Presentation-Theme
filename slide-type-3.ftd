@@ -4,8 +4,8 @@ height: fill
 string title:
 optional string subtitle:
 optional string text:
-optional string image-1:
-optional string image-2:
+optional ftd.image-src image-1:
+optional ftd.image-src image-2:
 slots: slide-image slide-info
 slot-heights: 100%
 slot-widths: 50% auto
@@ -31,18 +31,17 @@ align: center
 string title:
 width: fill
 height: fill
-optional string image-1:
-optional string image-2:
+optional ftd.image-src image-1:
+optional ftd.image-src image-2:
 slots: title | body
 slot-heights: 10% auto
 overflow-x: auto
 overflow-y: auto
 
 --- ftd.text: $title
-style: medium
-color: #5e5a58
+color: $background
 align: center
-size: 60
+role: $big
 slot: title
 
 --- ftd.row:
@@ -76,22 +75,69 @@ width: fill
 height: fill
 spacing: 40
 padding: 30
-background-color: #c8c9be
+background-color: $blue
 overflow-x: auto
 overflow-y: auto
 
 
 --- ftd.text: $subtitle
 if: $subtitle is not null
-font: fantasy
 align: center
-size: 40
+role: $large
 text-align: center
 
 
 --- ftd.text: $text
 if: $text is not null
-font: sans-serif
 text-align: center
+role: $medium
+
+
+
+-- ftd.font-size large-desktop:
+line-height: 48
+size: 40
+letter-spacing: 0
+
+-- ftd.type large: fantasy
+desktop: $large-desktop
+mobile: $large-desktop
+xl: $large-desktop
+weight: 400
+
+
+-- ftd.font-size medium-desktop:
 line-height: 35
 size: 25
+letter-spacing: 0
+
+
+-- ftd.type medium: sans-serif
+desktop: $medium-desktop
+mobile: $medium-desktop
+xl: $medium-desktop
+weight: 400
+
+
+
+
+-- ftd.font-size big-desktop:
+line-height: 68
+size: 60
+letter-spacing: 0
+
+
+-- ftd.type big: serif
+desktop: $big-desktop
+mobile: $big-desktop
+xl: $big-desktop
+weight: 500
+
+-- ftd.color blue:
+light: #c8c9be
+dark: #c8c9be
+
+
+-- ftd.color background:
+light: #5e5a58
+dark: #5e5a58
